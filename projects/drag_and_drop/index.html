@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My_Tiny_Projects</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"
+      integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Items will be populated dynamically -->
+    </div>
+
+    <script>
+      const dragArea = document.querySelector(".wrapper");
+
+      // Function to get saved order from localStorage
+      function getSavedOrder() {
+        return (
+          JSON.parse(localStorage.getItem("taskOrder")) || [
+            "Draggable Element One",
+            "Draggable Element Two",
+            "Draggable Element Three",
+            "Draggable Element Four",
+            "Draggable Element Five",
+            "Draggable Element Six",
+          ]
+        );
+      }
+
+      // Function to save order to localStorage
+      function saveOrder(order) {
+        localStorage.setItem("taskOrder", JSON.stringify(order));
+      }
+
+      // Function to render items in the saved order
+      function renderItems() {
+        const savedOrder = getSavedOrder();
+        dragArea.innerHTML = ""; // Clear existing items
+        savedOrder.forEach((itemText) => {
+          const item = document.createElement("div");
+          item.classList.add("item");
+          item.innerHTML = `
+            <span class="text">${itemText}</span>
+            <i class="fa fa-bars"></i>
+          `;
+          dragArea.appendChild(item);
+        });
+      }
+
+      // Initialize Sortable with onEnd callback to save new order
+      new Sortable(dragArea, {
+        animation: 350,
+        onEnd: () => {
+          const updatedOrder = Array.from(dragArea.children).map(
+            (item) => item.querySelector(".text").textContent
+          );
+          saveOrder(updatedOrder);
+        },
+      });
+
+      // Initial rendering of items
+      renderItems();
+    </script>
+  </body>
+</html>
