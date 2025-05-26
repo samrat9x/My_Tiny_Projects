@@ -1,1 +1,0 @@
-# drag_and_drop_using_sortable_library
