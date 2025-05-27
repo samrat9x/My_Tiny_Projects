@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ToDoApp</title>
+        <link
+            rel="stylesheet"
+            href="https://samrat9x.github.io/css_controller/projectCSS/toDoApp/style.css"
+        />
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+        <script src="script.js" defer></script>
+        <!-- iconscout link for icons -->
+        <link
+            rel="stylesheet"
+            href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+        />
+    </head>
+    <body>
+        <h1>TODO APP</h1>
+        <main class="wrapper">
+            <div class="task-input">
+                <i class="uil uil-edit"></i>
+                <input type="text" placeholder="Add a new task" />
+            </div>
+            <div class="controls">
+                <div class="filters">
+                    <span id="all" class="active">All</span>
+                    <span id="pending">Pending</span>
+                    <span id="completed">Completed</span>
+                </div>
+                <button class="btnP clear-btn" role="button">
+                    <span class="btnS"></span>
+                    <span class="btnE"></span>
+                    <span class="btnF text"> Clear All </span>
+                </button>
+            </div>
+            <ul class="task-box"></ul>
+        </main>
+        <footer>
+            <p style="text-align: center; font-weight: 500">
+                Developed By <a href="https://samrat.top">Samrat</a>
+            </p>
+        </footer>
+    </body>
+</html>
