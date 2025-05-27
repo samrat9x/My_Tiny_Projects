@@ -1,83 +1,83 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+@import url("../githubLogo.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
-    background-color: #002339;
-    color: #fff;
+body {
+  background-color: #002339;
+  color: #fff;
 }
-.container{
-    margin: 5%;
-    width: 90%;
-    max-width: 430px;
-    
+.container {
+  margin: 5%;
+  width: 90%;
+  max-width: 430px;
 }
-.display{
-    width: 90%;
-    margin: 50px 0 30px 0;
-    background-color: #fff;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    border-radius: 5px;
-    position: relative;
+.display {
+  width: 90%;
+  margin: 50px 0 30px 0;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
 }
-.fa-copy{
-    font-size: 24px;
-    color: #002339;
-    &:hover{
-        cursor: pointer;
-    }
-}
-.eye{
-    font-size: 24px;
-    position: absolute;
-    right: -35px;
-    color: #fff;
+.fa-copy {
+  font-size: 24px;
+  color: #002339;
+  &:hover {
     cursor: pointer;
+  }
 }
-.container h1{
-    font-weight: 500;
-    font-size: 45px;
+.eye {
+  font-size: 24px;
+  position: absolute;
+  right: -35px;
+  color: #fff;
+  cursor: pointer;
 }
-.container h1 span{
-    color: #019f55;
-    border-bottom: 4px solid #019f55;
-    padding-bottom: 7px;
+.container h1 {
+  font-weight: 500;
+  font-size: 45px;
 }
-.display input{
-    border: 0;
-    outline: 0;
-    font-size: 24px;
-    width: inherit;
+.container h1 span {
+  color: #019f55;
+  border-bottom: 4px solid #019f55;
+  padding-bottom: 7px;
 }
-.container button{
-    border: 0;
-    outline: 0;
-    background: #019f55;
-    color: #fff;
-    font-size: 22px;
-    padding: 5px 18px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 180px;
-    font-weight: 300;
-    &:hover{
-        cursor: pointer;
-    }
+.display input {
+  border: 0;
+  outline: 0;
+  font-size: 24px;
+  width: inherit;
+}
+.container button {
+  border: 0;
+  outline: 0;
+  background: #019f55;
+  color: #fff;
+  font-size: 22px;
+  padding: 5px 18px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 180px;
+  font-weight: 300;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-footer{
-    padding-top: 100px;
-    text-align: center;
-    & a{
-      color: #019f55;  
-    }
+footer {
+  padding-top: 100px;
+  text-align: center;
+  & a {
+    color: #019f55;
+  }
 }
